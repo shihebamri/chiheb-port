@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, Lock } from "lucide-react";
 import "./index.css";
 import pastry from "./gym.png";
 import ice from "./ice.png";
 import gym from "./pastry.png";
 import me from "./me.jpg";
-
+import bakery from "./bakery.png";
+import cafRes from "./caf-res.png";
+import chef from "./chef.png";
 
 export default function App() {
   const [color, setColor] = useState(false);
@@ -105,7 +107,6 @@ function Header() {
   );
 }
 
-
 function Skills() {
   return (
     <section className="section">
@@ -140,6 +141,7 @@ function Projects() {
       <h2 className="sectionTitle" id="projects" tabIndex={-1}>
         Projects
       </h2>
+      <p className="remark">ALL GITHUB REPO ARE LOCKED. SORRY NOT SORRY 🫣</p>
       <div className="projectGrid">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
@@ -180,14 +182,9 @@ function ProjectCard({ project }) {
           >
             Live Project ↗️
           </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-          >
-            GitHub Repo ↗️
-          </a>
+          <button className="button locked" disabled>
+            <Lock size={16} /> GitHub Repo Locked
+          </button>
         </div>
       </div>
     </div>
@@ -299,6 +296,48 @@ const projects = [
     features: [
       { text: "Static Web App", emoji: "🧩" },
       { text: "Aesthetic UI", emoji: "😍" },
+      { text: "Mobile Responsive", emoji: "📱" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Bakery Website",
+    image: bakery,
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
+    description: "A modern and elegant website for a bakery showcasing products and customer testimonials.",
+    link: "https://monpain.vercel.app/",
+    github: "https://github.com/yourusername/bakery-website",
+    features: [
+      { text: "Elegant Design", emoji: "🍞" },
+      { text: "Product Showcase", emoji: "🛍️" },
+      { text: "Mobile Responsive", emoji: "📱" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Coffee Restaurant Website",
+    image: cafRes,
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
+    description: "A stylish website for a coffee restaurant featuring a menu, gallery, and reservation system.",
+    link: "https://azur-cafe-restau.vercel.app/",
+    github: "https://github.com/yourusername/coffee-restaurant-website",
+    features: [
+      { text: "Interactive Menu", emoji: "☕" },
+      { text: "Reservation System", emoji: "📅" },
+      { text: "Mobile Responsive", emoji: "📱" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Chef Portfolio Website",
+    image: chef,
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
+    description: "A professional portfolio website for a chef showcasing culinary skills, recipes, and achievements.",
+    link: "https://chef-ghassen-v2.vercel.app/",
+    github: "https://github.com/yourusername/chef-portfolio-website",
+    features: [
+      { text: "Recipe Showcase", emoji: "🍽️" },
+      { text: "Elegant Design", emoji: "🎨" },
       { text: "Mobile Responsive", emoji: "📱" },
     ],
   },
