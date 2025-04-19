@@ -141,7 +141,9 @@ function Projects() {
       <h2 className="sectionTitle" id="projects" tabIndex={-1}>
         Projects
       </h2>
-      <p className="remark">ALL GITHUB REPO ARE LOCKED. SORRY NOT SORRY 🫣</p>
+      <p className="remark" style={{ color: "white" }}>
+        ALL GITHUB REPO ARE LOCKED. SORRY NOT SORRY 🫣
+      </p>
       <div className="projectGrid">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
