@@ -51,14 +51,13 @@ function Navbar({ color }) {
 function Header() {
   return (
     <header className="header">
-      <div className="headerContent">
+      <div className="headerContent responsive-header">
         <div className="headerText">
           <h1 className="title">
             Hi, I'm <span className="title-name">Chiheb Amri</span>
           </h1>
           <p className="subtitle">(👨🏻‍💻Web Developer + 🚀Entrepreneur)</p>
           <img src={me} alt="Chiheb Amri" className="profile-photo" />
-
           <p className="about-me">
             I'm an entrepreneur and a passionate web developer with experience in
             creating responsive and user-friendly web applications. I specialize
